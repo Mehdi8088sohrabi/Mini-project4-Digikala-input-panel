@@ -2,6 +2,9 @@ let myfocus = document.getElementById('myinput');
 let defu = document.getElementById('defu');
 let button = document.getElementById('button');
 
+myfocus.addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, '');
+});
 
 myfocus.addEventListener('focus', function() {
     defu.classList.add('hidden');
